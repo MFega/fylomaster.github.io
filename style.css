@@ -1,0 +1,212 @@
+/* ### Primary
+
+- Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%)
+
+### Neutral
+
+- Pale Blue: hsl(243, 100%, 93%)
+- Grayish Blue: hsl(229, 7%, 55%)
+- Dark Blue: hsl(228, 56%, 26%)
+- Very Dark Blue: hsl(229, 57%, 11%) */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+      background: hsl(229, 57%, 11%);  
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+     background-image: url("./fylo-data-storage-component-master/images/bg-mobile.png")  ;
+     background-repeat: no-repeat;
+     background-size: cover; 
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    margin: 0 auto; 
+     align-items: center;
+    justify-content: center; 
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.6em;
+}
+
+.first-container{
+    background: hsl(228, 56%, 26%) ;
+    padding: 30px 50px 30px 30px; 
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 90px;
+}
+
+.logo{
+    margin-bottom: 25px;
+}
+
+.header-item{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+.icon img{
+    background: hsl(229, 57%, 11%);
+    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+}
+.icon img{
+    padding: 10px;  
+}
+
+.second-container{
+    background: hsl(228, 56%, 26%);
+    padding: 30px 30px 40px 30px;
+    border-radius: 10px;
+    position: relative;
+}
+.second-container p{
+    font-size: 14px;
+    color: white;
+    font-weight: 100;
+    text-align: center;
+}
+.second-container p span{
+    font-weight: 700;
+}
+
+ .bar-container{
+    width: 100%;
+    background: hsl(229, 57%, 11%);
+    height: 15px;
+    border-radius:10px ;
+    margin-top: 13px;
+    position: relative;
+}
+
+.bar{
+     position: absolute;
+    transform: translate(2px,-13.5px);
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    height: 11.5px;
+    border-radius: 10px;
+    margin-top: 15px;
+    background: linear-gradient(to right, hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+}
+
+.circle{
+    width:12px ;
+    height: 12px;
+    border-radius: 50%;
+    background: white; 
+}
+
+.gb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.gb p{
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.gb-left{
+    position: absolute;
+    left: 50%;
+}
+
+.float{
+    background: white;
+    border-radius: 10px;
+     padding: 20px 40px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: flex; 
+    position: relative;
+ left: -50%; 
+}
+
+    strong{
+        font-size: 40px;
+        color: hsl(229, 57%, 11%);
+    }
+
+   .float span{
+ color:  hsl(229, 7%, 55%);
+font-size: 14px;
+font-weight: 700;
+ margin-left: 5px;
+ letter-spacing: .5px ;
+white-space: rowrap ;
+    }  
+
+.triangle{
+    display: none;
+}
+
+
+
+@media only screen and (min-width:768px){
+    body{
+        background: url("./fylo-data-storage-component-master/images/bg-desktop.png") no-repeat;
+        background-position:left 0vw top 50vh;
+    }
+
+     .container{
+       flex-direction: row;
+       height: fit-content;
+       align-items: flex-end;
+       width: 700px;
+    } 
+
+    .second-container{
+        width: 80%;
+    }
+
+    .second-container p{
+        text-align: left;
+    }
+
+    .gb-left{
+        left: unset;
+        right: 2rem;
+        top: -70px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .float{
+        border-bottom-right-radius: 0;
+        left: 0;
+    }
+
+    .triangle{
+        border-right: 10px solid white;
+        border-left: 10px solid transparent;
+        border-top: 10px solid white;
+        border-bottom: 10px solid transparent;
+        display: block;
+        height: 0;
+        width: 0;
+    }
+}
